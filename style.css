@@ -4,27 +4,32 @@
     box-sizing: border-box;
 }
 
-body {
-    text-align: center;
+
+.outer_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
-.container1 {
+.container {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.container * {
+    justify-content: space-between;
+    align-items: space-between;
+    background-color: violet;
+
+    min-height: 20px;
+    min-width: 20px;
 
     padding: 10px;
-}
 
-
-
-.row {
-    display: flex;
-
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-
-.column {
-    background-color: lightgrey;
-    padding: 1rem 0;
-    flex: 1;
 }
