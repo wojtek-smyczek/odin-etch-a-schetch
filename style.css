@@ -8,25 +8,25 @@
 .outer_container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1px;
     justify-content: space-between;
     align-items: space-between;
 }
 
 .container {
-    background-color: aquamarine;
     display: flex;
     justify-content: space-between;
     align-items: space-between;
-    gap: 20px;
-    flex-shrink: 0;
+    gap: 1px;
+    flex-grow: 1;
 }
 
 .container * {
+    aspect-ratio: 1/1;
     justify-content: space-between;
     align-items: space-between;
     background-color: violet;
-
+    flex-grow: 1;
     min-height: 20px;
     min-width: 20px;
 
