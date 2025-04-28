@@ -24,8 +24,8 @@ pixels.forEach(pixel => {
     pixel.addEventListener('mouseover', () => {
         pixel.style.backgroundColor = 'black';
     });
-    pixel.addEventListener('mouseout', () => {
-        pixel.style.backgroundColor = '';
-    })
+    // pixel.addEventListener('mouseout', () => {
+    //     pixel.style.backgroundColor = '';
+    // })
 })
 

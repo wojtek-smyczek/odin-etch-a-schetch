@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+.button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+
+}
+
+.button1 {
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0;
+    padding: 0 15px;
+
+}
+
 
 .outer_container {
     display: flex;
