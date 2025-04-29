@@ -1,14 +1,13 @@
 let outer_container;
 
-function clearTheCanvas() {
-    outer_container.remove();
-}
 function drawTheCanvas(size) {
+    if (outer_container) {
+        outer_container.remove();
+    }
 
     outer_container = document.createElement('div');
     outer_container.classList.add('outer_container');
     document.body.appendChild(outer_container);
-
 
     for (let j = 0; j < size; j++) {
         const container = document.createElement('div');
@@ -24,7 +23,6 @@ function drawTheCanvas(size) {
     addPixelHoverEffect();
 }
 
-
 // --------hover over the pixel------------
 function addPixelHoverEffect() {
 
@@ -34,9 +32,6 @@ function addPixelHoverEffect() {
         pixel.addEventListener('mouseover', () => {
             pixel.style.backgroundColor = 'black';
         });
-        // pixel.addEventListener('mouseout', () => {
-        //     pixel.style.backgroundColor = '';
-        // })
     })
 }
 
@@ -48,12 +43,9 @@ button.addEventListener('click', () => {
     let personInput = prompt("Enter the number of desired squares!");
 
     if (personInput == null || personInput == "" || personInput > 100 || personInput < 0) {
-        text = "Invalid";
+        alert("Invalid");
     } else {
-        clearTheCanvas();
         drawTheCanvas(Number(personInput));
     }
-
-
 })
 
